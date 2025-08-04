@@ -12,4 +12,4 @@ services:
       - key: PYTHON_VERSION
         value: 3.11
       - key: MONGO_URI
-        value: mongodb+srv://<user>:<password>@cluster0.mongodb.net/
+        value: mongodb+srv://jobinvarghese7959:g062sUEMamt08mFQ@cluster0.6deyk7y.mongodb.net/
