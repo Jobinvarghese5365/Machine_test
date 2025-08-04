@@ -4,12 +4,12 @@ services:
     env: python
     plan: free
     rootDir: backend
-    buildCommand: pip install -r ../requirements.txt
-    startCommand: gunicorn productapi.wsgi:application
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn backend.productapi.wsgi:application
     envVars:
       - key: DJANGO_SETTINGS_MODULE
-        value: productapi.settings
+        value: backend.productapi.settings
       - key: PYTHON_VERSION
         value: 3.11
       - key: MONGO_URI
-        value: mongodb+srv://jobinvarghese7959:g062sUEMamt08mFQ@cluster0.6deyk7y.mongodb.net/
+        value: mongodb+srv://<user>:<password>@cluster0.mongodb.net/
