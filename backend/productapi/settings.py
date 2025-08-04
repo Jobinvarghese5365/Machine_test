@@ -9,7 +9,7 @@ https://docs.djangoproject.com/en/4.1/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.1/ref/settings/
 """
-
+import os
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -23,9 +23,11 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-dsjq#lgsh3vpag+aufe*2)h0zr2=$x$6-2^&a)&&=c2oq2i945'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
+ALLOWED_HOSTS = ['*']  # Or restrict to your Render domain
 
-ALLOWED_HOSTS = []
+# Optional: read MONGO_URI from Render env
+MONGO_URI = os.environ.get("MONGO_URI")
 
 
 # Application definition
