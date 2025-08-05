@@ -28,7 +28,7 @@ ALLOWED_HOSTS = ['*']  # Or restrict to your Render domain
 
 # Optional: read MONGO_URI from Render env
 MONGO_URI = os.environ.get("MONGO_URI")
-
+SECRET_KEY = os.environ.get("SECRET_KEY", "fallback-dev-secret-key")
 
 # Application definition
 
