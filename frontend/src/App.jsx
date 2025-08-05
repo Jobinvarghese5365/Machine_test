@@ -1,13 +1,15 @@
-
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import SearchPage from "./pages/SearchPage";
+import ProductDetails from "./pages/ProductDetails";
 
 function App() {
- 
-
   return (
- <div className="p-10 bg-black min-h-screen text-white">
-      <h1 className="text-4xl font-bold text-green-400">Tailwind is working!</h1>
-    </div>
-  )
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<SearchPage />} />
+        <Route path="/product/:id" element={<ProductDetails />} />
+      </Routes>
+    </BrowserRouter>
+  );
 }
-
-export default App
+export default App;
